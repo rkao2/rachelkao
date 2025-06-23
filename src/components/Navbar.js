@@ -1,10 +1,17 @@
-// components/Navbar.js
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 
 const Navbar = () => {
   return (
-    <AppBar position="static" color="primary">
+    <AppBar
+      position="static"
+      color="primary"
+      sx={{
+        borderRadius: 0,
+        boxShadow: 'none',
+        borderBottom: '1px solid rgba(0,0,0,0.12)',
+      }}
+    >
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           Rachel Kao

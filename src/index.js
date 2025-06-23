@@ -2,12 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import theme from './theme';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-const theme = createTheme({
-  // You can customize your theme here
-});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -2,26 +2,29 @@
 import React from 'react';
 import About from './components/About';
 import Navbar from './components/Navbar';
+import Landing from './components/Landing';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
-import { Container, Typography } from '@mui/material';
+
 
 function App() {
-  return (
-    <Container>
 
+  
+
+  return (
+  
+    <div>
       <Navbar/>
+      <Landing/>
       <About/>
       <Projects/>
       <Resume/>
       <Contact/>
       <Footer/>
-
-
-    </Container>
+    </div>
   );
 }
 
