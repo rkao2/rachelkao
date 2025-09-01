@@ -8,16 +8,16 @@ const projects = [
     desc: 'Developed a prototype in Quarkus to evaluate against Spring Boot, replicating and extending core API functionality for native executable deployment.', 
     tech: ['Quarkus', 'Spring Boot', 'Kafka', 'Elasticsearch', 'Docker', 'Gradle', 'Kubernetes', 'Helm'], 
     date: 'June 2025',
-    image: '/assets/satellite_service.png', // Add your screenshot image path here
+    image: '/assets/satellitelistapi.png', // Add your screenshot image path here
     demoLink: '#', // Add live demo link if available
     codeLink: '#'  // Add GitHub link if available
   },
   { 
     title: 'AuraNotes', 
     desc: 'Our project, AuraNotes, is a web application designed to empower young adults, writers, and productivity enthusiasts with a high-quality, user-friendly mental health and mood-tracking tool. Built with CSS, HTML, and JavaScript, AuraNotes will offer seamless user authentication, organized entry creation, a robust search and filter feature, and a mood tracker to analyze emotional trends over time. This intuitive platform aims to help users understand and manage their mental well-being through thoughtful design and functionality.',
-    tech: ['React'], 
+    tech: ['React', 'MongoDB'], 
     date: 'December 2024',
-    image: '/assets/aura_notes.png',
+    image: '/assets/auranotesdemo1.gif',
     demoLink: '#',
     codeLink: 'https://github.com/rkao2/journal-app'
   },
@@ -37,7 +37,7 @@ const projects = [
     date: 'April 2024',
     image: '/assets/good_eats.png',
     demoLink: '#',
-    codeLink: '#'
+    codeLink: 'https://github.com/rkao2/GoodEats'
   },
   
 ];
