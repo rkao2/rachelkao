@@ -1,15 +1,14 @@
 // src/components/About.js
 import React, { useState } from 'react';
 import { Container, Typography, Box, IconButton } from '@mui/material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const hobbies = [
-  { title: 'Golden Gate Bridge 🌉', img: '/assets/img1.jpg'},
+  { title: 'Golden Gate Bridge 🌉', img: '/assets/img1.jpg' },
   { title: 'Arboretum ⛲️', img: '/assets/img2.jpg' },
   { title: 'Summerlands Concert 2025 🎵', img: '/assets/img3.jpg' },
-  // Add more hobbies as needed
 ];
 
 const About = () => {
@@ -32,7 +31,7 @@ const About = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           gap: { xs: 4, md: 8 },
-          fontFamily: '"Nanum Pen Script", "Comic Sans MS", cursive', // Polaroid-style font
+          fontFamily: '"Nanum Pen Script", "Comic Sans MS", cursive',
         }}
       >
         {/* Text on the left */}
@@ -47,84 +46,95 @@ const About = () => {
 
         {/* Slideshow Polaroid Card on the right */}
         <Box sx={{ position: 'relative', width: 260, height: 320 }}>
-          <AnimatePresence initial={false}>
-            <motion.div
-              key={currentPage}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              style={{
-                width: '100%',
-                height: '100%',
-                position: 'absolute',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              {/* Polaroid Frame */}
-              <Box
-                sx={{
+          {hobbies.map((item, index) => {
+            const isCurrent = index === currentPage;
+            const isNext = index === (currentPage + 1) % hobbies.length;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50, rotate: Math.random() * 10 - 5 }}
+                animate={{
+                  opacity: isCurrent ? 1 : isNext ? 0.6 : 0,
+                  x: isCurrent ? 0 : isNext ? 10 : 0, // slight horizontal offset for next card
+                  y: isCurrent ? 0 : isNext ? 10 : 0, // slight vertical offset
+                  rotate: isCurrent ? 0 : isNext ? Math.random() * 4 - 2 : 0,
+                  scale: isCurrent ? 1 : isNext ? 0.95 : 0.9,
+                  zIndex: isCurrent ? 2 : isNext ? 1 : 0,
+                  boxShadow: isCurrent
+                    ? '0px 10px 20px rgba(0,0,0,0.3)'
+                    : isNext
+                    ? '0px 6px 12px rgba(0,0,0,0.15)'
+                    : 'none',
+                }}
+                transition={{ duration: 0.5 }}
+                drag={isCurrent}
+                dragConstraints={{ top: -80, bottom: 80, left: -80, right: 80 }}
+                dragElastic={0.3}
+                whileTap={isCurrent ? { cursor: 'grabbing', rotate: Math.random() * 20 - 10 } : {}}
+                onDragEnd={isCurrent ? (event, info) => {
+                  if (info.offset.x > 50) nextPage();
+                  else if (info.offset.x < -50) prevPage();
+                } : undefined}
+                style={{
                   width: '100%',
                   height: '100%',
-                  bgcolor: '#fff',
-                  borderRadius: 2,
-                  boxShadow: 6,
-                  border: '4px solid #f0f0f0',
+                  position: 'absolute',
                   display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'flex-start',
+                  justifyContent: 'center',
                   alignItems: 'center',
-                  p: 1.2,
+                  cursor: isCurrent ? 'grab' : 'default',
                 }}
               >
                 <Box
-                  component="img"
-                  src={hobbies[currentPage].img}
-                  alt={hobbies[currentPage].title}
                   sx={{
                     width: '100%',
-                    height: 260,
-                    objectFit: 'cover',
-                    borderRadius: 1,
-                    boxShadow: 3,
+                    height: '100%',
+                    bgcolor: '#fff',
+                    borderRadius: 2,
+                    border: '4px solid #f0f0f0',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    p: 1.2,
                   }}
-                />
-                <Typography variant="subtitle2" 
-                sx={{ 
-                  mt: 1,
-                  fontFamily: '"Nanum Pen Script", cursive',
-                  fontSize: 16,
-                  textAlign: 'center',
-                }}>
-                  {hobbies[currentPage].title}
-                </Typography>
-              </Box>
-            </motion.div>
-          </AnimatePresence>
+                >
+                  <Box
+                    component="img"
+                    src={item.img}
+                    alt={item.title}
+                    sx={{
+                      width: '100%',
+                      height: 260,
+                      objectFit: 'cover',
+                      borderRadius: 1,
+                      boxShadow: isCurrent ? 3 : 1, // subtle shadow difference
+                    }}
+                  />
+                  <Typography
+                    variant="subtitle2"
+                    sx={{
+                      mt: 1,
+                      fontFamily: '"Nanum Pen Script", cursive',
+                      fontSize: 16,
+                      textAlign: 'center',
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Box>
+              </motion.div>
+            );
+          })}
 
           {/* Navigation arrows */}
-          <Box
-            sx={{
-              position: 'absolute',
-              top: '50%',
-              left: -40,
-              transform: 'translateY(-50%)',
-            }}
-          >
+          <Box sx={{ position: 'absolute', top: '50%', left: -40, transform: 'translateY(-50%)' }}>
             <IconButton onClick={prevPage}>
               <ArrowBackIosIcon />
             </IconButton>
           </Box>
-          <Box
-            sx={{
-              position: 'absolute',
-              top: '50%',
-              right: -40,
-              transform: 'translateY(-50%)',
-            }}
-          >
+          <Box sx={{ position: 'absolute', top: '50%', right: -40, transform: 'translateY(-50%)' }}>
             <IconButton onClick={nextPage}>
               <ArrowForwardIosIcon />
             </IconButton>
