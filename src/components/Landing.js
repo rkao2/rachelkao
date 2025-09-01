@@ -31,8 +31,8 @@ const LandingPage = () => {
             Hi, I’m Rachel Kao
           </Typography>
           <Typography variant="h5" sx={{ mb: 5, fontWeight: 400, lineHeight: 1.5 }}>
-            Frontend Developer & HCI Enthusiast <br />
-            Crafting clean, elegant user experiences
+            Fullstack Developer & HCI Enthusiast <br />
+            Dedicated to learn, grow, and craft elegant user experiences
           </Typography>
 
           <ScrollLink

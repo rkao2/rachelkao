@@ -21,7 +21,7 @@ const Footer = () => (
             GitHub
           </Link>{' '}
           |{' '}
-          <Link href="mailto:rkao2@uci.edu" underline="hover">
+          <Link href="mailto:rachelsingkao@gmail.com" underline="hover">
             Email Me
           </Link>
         </Typography>

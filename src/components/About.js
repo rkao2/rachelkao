@@ -12,7 +12,7 @@ const About = () => (
     >
     <Typography variant="h4" gutterBottom>About Me</Typography>
     <Typography>
-      I'm Rachel Kao, a passionate frontend developer and computer science student.
+      Hi, I’m Rachel Kao—a frontend developer and Computer Science student at UC Irvine. I love building websites, exploring new tech, and expressing creativity through journaling, baking, and reading. I’m always learning, growing, and taking on new challenges—scroll down to see my projects and resume!
     </Typography>
     
     </motion.div>
