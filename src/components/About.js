@@ -50,6 +50,9 @@ const About = () => {
             const isCurrent = index === currentPage;
             const isNext = index === (currentPage + 1) % hobbies.length;
 
+            // Random rotation for stacked card
+            const randomRotation = isNext ? Math.random() * 10 - 5 : 0;
+
             return (
               <motion.div
                 key={index}
@@ -58,7 +61,7 @@ const About = () => {
                   opacity: isCurrent ? 1 : isNext ? 0.6 : 0,
                   x: isCurrent ? 0 : isNext ? 10 : 0, // slight horizontal offset for next card
                   y: isCurrent ? 0 : isNext ? 10 : 0, // slight vertical offset
-                  rotate: isCurrent ? 0 : isNext ? Math.random() * 4 - 2 : 0,
+                  rotate: isCurrent ? 0 : randomRotation,
                   scale: isCurrent ? 1 : isNext ? 0.95 : 0.9,
                   zIndex: isCurrent ? 2 : isNext ? 1 : 0,
                   boxShadow: isCurrent
@@ -109,7 +112,7 @@ const About = () => {
                       height: 260,
                       objectFit: 'cover',
                       borderRadius: 1,
-                      boxShadow: isCurrent ? 3 : 1, // subtle shadow difference
+                      boxShadow: isCurrent ? 3 : 1,
                     }}
                   />
                   <Typography
