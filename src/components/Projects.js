@@ -27,8 +27,8 @@ const projects = [
     tech: ['Deepl', 'Groq (Whisper AI, Meta Llama 70B)', 'Eleven Labs'], 
     date: 'June 2024',
     image: '/assets/care_voice.png',
-    demoLink: '#',
-    codeLink: '#'
+    demoLink: 'https://devpost.com/software/care-voice',
+    codeLink: 'https://github.com/rkao2/ucbhackathon24'
   },
   { 
     title: 'Good Eats', 
@@ -36,7 +36,7 @@ const projects = [
     tech: ['Google Gemini', 'Flask', 'MySQL', 'Python', 'React', 'Material UI'], 
     date: 'April 2024',
     image: '/assets/good_eats.png',
-    demoLink: '#',
+    demoLink: 'https://devpost.com/software/good-eats-a6o5y0',
     codeLink: 'https://github.com/rkao2/GoodEats'
   },
   
