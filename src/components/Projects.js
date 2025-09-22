@@ -4,15 +4,6 @@ import { motion } from "framer-motion";
 
 const projects = [
   { 
-    title: 'Satellite List Service Prototype', 
-    desc: 'Developed a prototype in Quarkus to evaluate against Spring Boot, replicating and extending core API functionality for native executable deployment.', 
-    tech: ['Quarkus', 'Spring Boot', 'Kafka', 'Elasticsearch', 'Docker', 'Gradle', 'Kubernetes', 'Helm'], 
-    date: 'June 2025',
-    image: '/assets/satellitelistapi.png', // Add your screenshot image path here
-    demoLink: '#', // Add live demo link if available
-    codeLink: '#'  // Add GitHub link if available
-  },
-  { 
     title: 'AuraNotes', 
     desc: 'Our project, AuraNotes, is a web application designed to empower young adults, writers, and productivity enthusiasts with a high-quality, user-friendly mental health and mood-tracking tool. Built with CSS, HTML, and JavaScript, AuraNotes will offer seamless user authentication, organized entry creation, a robust search and filter feature, and a mood tracker to analyze emotional trends over time. This intuitive platform aims to help users understand and manage their mental well-being through thoughtful design and functionality.',
     tech: ['React', 'MongoDB'], 
@@ -26,7 +17,7 @@ const projects = [
     desc: 'Full-stack medical translator mobile app bridging communication gaps between doctors and patients, featuring real-time translation and speech synthesis.', 
     tech: ['Deepl', 'Groq (Whisper AI, Meta Llama 70B)', 'Eleven Labs'], 
     date: 'June 2024',
-    image: '/assets/care_voice.png',
+    image: '/assets/carevoice.png',
     demoLink: 'https://devpost.com/software/care-voice',
     codeLink: 'https://github.com/rkao2/ucbhackathon24'
   },
@@ -35,7 +26,7 @@ const projects = [
     desc: 'Full-stack web app that generates curated meal options with nutritional facts, backed by MySQL and Flask with a responsive React UI.', 
     tech: ['Google Gemini', 'Flask', 'MySQL', 'Python', 'React', 'Material UI'], 
     date: 'April 2024',
-    image: '/assets/good_eats.png',
+    image: '/assets/goodeats.png',
     demoLink: 'https://devpost.com/software/good-eats-a6o5y0',
     codeLink: 'https://github.com/rkao2/GoodEats'
   },
