@@ -24,7 +24,7 @@ const LandingPage = () => {
 
       {/* Clouds */}
       <motion.img
-        src="/assets/cloud1.png"
+        src="cloud1.png"
         alt="front cloud"
         initial={{ x: 0, y: 0, opacity: 0.9, scale: 1.3 }}
         animate={{ x: -1400, y: -150, opacity: 0, scale: 1.3 }}
@@ -40,7 +40,7 @@ const LandingPage = () => {
       />
 
       <motion.img
-        src="/assets/cloud1.png"
+        src="cloud1.png"
         alt="middle cloud"
         initial={{ x: 0, y: 0, opacity: 0.8, scale: 1.2 }}
         animate={{ x: 1300, y: 100, opacity: 0, scale: 1.2 }}
@@ -56,7 +56,7 @@ const LandingPage = () => {
       />
 
       <motion.img
-        src="/assets/cloud2.png"
+        src="cloud2.png"
         alt="back cloud"
         initial={{ x: 0, y: 0, opacity: 0.7, scale: 1.1 }}
         animate={{ x: -900, y: -50, opacity: 0, scale: 1.1 }}
@@ -72,7 +72,7 @@ const LandingPage = () => {
       />
 
       <motion.img
-        src="/assets/cloud3.png"
+        src="cloud3.png"
         alt="back cloud"
         initial={{ x: 0, y: 0, opacity: 0.6, scale: 1.05 }}
         animate={{ x: 900, y: 70, opacity: 0, scale: 1.05 }}
