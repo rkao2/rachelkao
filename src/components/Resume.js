@@ -7,7 +7,7 @@ const Resume = () => (
     <Button
       variant="contained"
       color="primary"
-      href="/assets/Rachel_Kao_Resume.pdf"
+      href="assets/Rachel_Kao_Resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
     >
