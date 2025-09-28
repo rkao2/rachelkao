@@ -17,7 +17,7 @@ const projects = [
     desc: 'Full-stack medical translator mobile app bridging communication gaps between doctors and patients, featuring real-time translation and speech synthesis.', 
     tech: ['Deepl', 'Groq (Whisper AI, Meta Llama 70B)', 'Eleven Labs'], 
     date: 'June 2024',
-    image: './public/carevoice.png',
+    image: '${process.env.PUBLIC_URL}/carevoice.png',
     demoLink: 'https://devpost.com/software/care-voice',
     codeLink: 'https://github.com/rkao2/ucbhackathon24'
   },
