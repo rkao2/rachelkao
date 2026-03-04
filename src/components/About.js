@@ -6,9 +6,9 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const hobbies = [
-  { title: 'Golden Gate Bridge 🌉', img: '/assets/img1.jpg' },
-  { title: 'Arboretum ⛲️', img: '/assets/img2.jpg' },
-  { title: 'Summerlands Concert 2025 🎵', img: '/assets/img3.jpg' },
+  { title: 'Golden Gate Bridge 🌉', img: `${process.env.PUBLIC_URL}/img1.jpg` },
+  { title: 'Arboretum ⛲️', img: `${process.env.PUBLIC_URL}/img2.jpg` },
+  { title: 'Summerlands Concert 2025 🎵', img: `${process.env.PUBLIC_URL}/img3.jpg` },
 ];
 
 const About = () => {
@@ -36,10 +36,18 @@ const About = () => {
       >
         {/* Text on the left */}
         <Box sx={{ flex: 1 }}>
-          <Typography variant="h4" gutterBottom>
-            About me
+          <Typography variant="h4" gutterBottom 
+            sx={{ fontFamily: '"Times New Roman", serif', 
+            fontWeight: 600 
+            }}>
+            About Me
           </Typography>
-          <Typography variant="body1">
+          
+          <Typography variant="body1" 
+              sx={{ fontFamily: '"Lexend", sans-serif',
+                  fontSize: 18,
+                  lineHeight: 1.6
+              }}>
             I’m a fullstack developer and Computer Science student at UC Irvine. I love building websites, exploring new tech, and expressing creativity through journaling, baking, and reading. I’m always learning, growing, and taking on new challenges—scroll down to see my projects and resume!
           </Typography>
         </Box>
