@@ -24,8 +24,9 @@ const LandingPage = () => {
 
       {/* Clouds */}
       <motion.img
-        src="public/cloud1.png"
-        alt="front cloud"
+        component="img"
+        src={`${process.env.PUBLIC_URL}/cloud1.png`}
+        alt="Cloud 1"
         initial={{ x: 0, y: 0, opacity: 0.9, scale: 1.3 }}
         animate={{ x: -1400, y: -150, opacity: 0, scale: 1.3 }}
         transition={{ duration: 3, ease: 'easeInOut', delay: 0.4 }}
@@ -40,7 +41,8 @@ const LandingPage = () => {
       />
 
       <motion.img
-        src="public/cloud1.png"
+        component="img"
+        src={`${process.env.PUBLIC_URL}/cloud1.png`}
         alt="middle cloud"
         initial={{ x: 0, y: 0, opacity: 0.8, scale: 1.2 }}
         animate={{ x: 1300, y: 100, opacity: 0, scale: 1.2 }}
@@ -56,8 +58,9 @@ const LandingPage = () => {
       />
 
       <motion.img
-        src="public/cloud2.png"
-        alt="back cloud"
+        component="img"
+        src={`${process.env.PUBLIC_URL}/cloud2.png`}
+        alt="Cloud 2"
         initial={{ x: 0, y: 0, opacity: 0.7, scale: 1.1 }}
         animate={{ x: -900, y: -50, opacity: 0, scale: 1.1 }}
         transition={{ duration: 3, ease: 'easeInOut', delay: 0.8 }}
@@ -72,8 +75,9 @@ const LandingPage = () => {
       />
 
       <motion.img
-        src="public/cloud3.png"
-        alt="back cloud"
+        component="img"
+        src={`${process.env.PUBLIC_URL}/cloud3.png`}
+        alt="Cloud 3"
         initial={{ x: 0, y: 0, opacity: 0.6, scale: 1.05 }}
         animate={{ x: 900, y: 70, opacity: 0, scale: 1.05 }}
         transition={{ duration: 3, ease: 'easeInOut', delay: 1 }}
